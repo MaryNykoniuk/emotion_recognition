@@ -4,4 +4,4 @@ numpy==1.26.4
 opencv-contrib-python==4.9.0.80
 streamlit==1.31.1
 tensorflow==2.15.0
-dlib @ https://github.com/sachadee/Dlib/raw/main/dlib-19.22.99-cp39-cp39-win_amd64.whl
+dlib
