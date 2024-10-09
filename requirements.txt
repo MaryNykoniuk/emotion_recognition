@@ -6,4 +6,3 @@ streamlit==1.31.1
 tensorflow==2.15.0
 dlib-bin
 scikit-learn
-streamlit_webrtc
