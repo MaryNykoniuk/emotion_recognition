@@ -6,7 +6,6 @@ import dlib
 import joblib
 from feature_extraction import find_features
 
-# Завантаження емоцій, детектора облич та інших моделей
 emotions = ['afraid', 'angry', 'disgusted', 'happy', 'neutral', 'sad', 'surprised']
 detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor('shape_predictor_68_face_landmarks.dat')
@@ -14,7 +13,6 @@ emotion_detector = tf.keras.models.load_model("my_model.h5")
 scaler = joblib.load('scaler.save')
 
 
-# Основна логіка програми
 def process_image(cv2_img):
     image_gray = cv2.cvtColor(cv2_img, cv2.COLOR_BGR2GRAY)
     faces = detector(image_gray, 1)
@@ -41,18 +39,13 @@ def main():
     st.set_page_config(page_title="Emotion Recognition App")
     st.title("Emotion Recognition App")
     enable = st.checkbox("Enable camera")
-    # Отримання зображення з камери
     img_file_buffer = st.camera_input("Take a picture", disabled=not enable)
 
     if img_file_buffer is not None:
-        # Читання зображення з буфера за допомогою OpenCV
         bytes_data = img_file_buffer.getvalue()
         cv2_img = cv2.imdecode(np.frombuffer(bytes_data, np.uint8), cv2.IMREAD_COLOR)
 
-        # Обробка зображення
         processed_img = process_image(cv2_img)
-
-        # Відображення обробленого зображення
         st.image(processed_img, channels="BGR")
 
 
