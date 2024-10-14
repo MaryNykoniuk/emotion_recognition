@@ -2,7 +2,7 @@
 
 # Emotion Detection from Facial Landmarks
 
-This project is focused on detecting human emotions based on facial landmark detection and feature extraction. The goal is to extract meaningful features (such as distances and angles between facial landmarks) and use them to classify different emotions.
+This project is focused on detecting human emotions based on facial landmark detection and feature extraction. The goal is to extract meaningful features (such as distances and angles between facial landmarks) and use them to classify different emotions (afraid, angry, disgusted, happy, neutral, sad, surprised).
 
 ## Table of Contents
 - [Overview](#overview)
@@ -74,4 +74,4 @@ To run this project, you will need the following libraries and tools installed:
    For each face, geometric features such as distances and angles between certain key landmarks (e.g., eyes, mouth, nose) are calculated. These features are critical for emotion classification.
 
 4. **Emotion Classification**: 
-   Based on the calculated features, a model classifies the emotion into categories like angry, disgusted, happy, neutral, sad, surprised.
+   Based on the calculated features, a model classifies the emotion into categories like afraid, angry, disgusted, happy, neutral, sad, surprised.
