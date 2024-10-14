@@ -42,7 +42,7 @@ def main():
     img_file_buffer = st.camera_input("Take a picture", disabled=not enable)
 
     if img_file_buffer is not None:
-        st.write("Wait a few seconds...")
+        st.write("Wait a few seconds :sunglasses:")
         bytes_data = img_file_buffer.getvalue()
         cv2_img = cv2.imdecode(np.frombuffer(bytes_data, np.uint8), cv2.IMREAD_COLOR)
 
